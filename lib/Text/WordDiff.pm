@@ -1,6 +1,6 @@
 package Text::WordDiff;
 
-# $Id: WordDiff.pm 1932 2005-08-08 17:17:03Z theory $
+# $Id: WordDiff.pm 3752 2008-05-05 03:23:55Z david $
 
 use strict;
 use vars qw(@ISA $VERSION);
@@ -8,7 +8,7 @@ use Algorithm::Diff ();
 use IO::File;
 use Carp;
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 # _Mastering Regular Expressions_, p. 132.
 my $BEGIN_WORD = $] >= 5.006
@@ -293,7 +293,7 @@ Outputs:
           ];
 
 Not so useful. It seems to be less of a problem if the C<use utf8;> line is
-commented out, in which caase we get:
+commented out, in which case we get:
 
   $VAR1 = [
             '뼈',
@@ -331,9 +331,9 @@ commented out, in which caase we get:
           ];
 
 Someone whose more familiar with non-space-using languages will have to
-explain to me how I might be able to duplicate this pattern when C<utf8;> is
-on, seing as it may very well be important to have it on in order to ensure
-proper character semantics.
+explain to me how I might be able to duplicate this pattern within the scope
+of C<use utf8;>, seing as it may very well be important to have it on in order
+to ensure proper character semantics.
 
 However, if my word tokenization approach is just too naive, and you decide
 that you need to take a different approach (maybe use
@@ -573,9 +573,14 @@ The module that makes this all possible.
 
 =back
 
-=head1 Bugs
+=head1 Support
 
-Please send bug reports to <bug-text-worddiff@rt.cpan.org>.
+This module is stored in an open repository at the following address:
+
+L<https://svn.kineticode.com/Text-WordDiff/trunk/>
+
+Patches against SVN::Notify are welcome. Please send bug reports to
+<bug-text-worddiff@rt.cpan.org>.
 
 =head1 Author
 
@@ -592,9 +597,9 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2005 Kineticode, Inc. All Rights Reserved.
+Copyright (c) 2005-2008 David Wheeler. Some Rights Reserved.
 
-This module is free software; you can redistribute it and/or modify it under the
-same terms as Perl itself.
+This module is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.
 
 =cut

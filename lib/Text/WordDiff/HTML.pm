@@ -4,7 +4,7 @@ use strict;
 use HTML::Entities qw(encode_entities);
 use vars qw($VERSION @ISA);
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 @ISA = qw(Text::WordDiff::Base);
 
 sub file_header {
@@ -19,17 +19,17 @@ sub file_footer { return '</div>' }
 
 sub same_items {
     shift;
-    return encode_entities( join('', @_) );
+    return encode_entities( join '', @_ );
 }
 
 sub delete_items {
     shift;
-    return '<del>' . encode_entities( join('', @_) ) . '</del>';
+    return '<del>' . encode_entities( join'', @_ ) . '</del>';
 }
 
 sub insert_items {
     shift;
-    return '<ins>' . encode_entities( join('', @_) ) . '</ins>';
+    return '<ins>' . encode_entities( join'', @_ ) . '</ins>';
 }
 
 1;
@@ -128,9 +128,14 @@ the F<eg> directory in the Text-WordDiff distribution.
 
 =back
 
-=head1 Bugs
+=head1 Support
 
-Please send bug reports to <bug-text-worddiff@rt.cpan.org>.
+This module is stored in an open repository at the following address:
+
+L<https://svn.kineticode.com/Text-WordDiff/trunk/>
+
+Patches against SVN::Notify are welcome. Please send bug reports to
+<bug-text-worddiff@rt.cpan.org>.
 
 =head1 Author
 
@@ -147,7 +152,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2005 Kineticode, Inc. All Rights Reserved.
+Copyright (c) 2005-2008 David Wheeler. Some Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself.

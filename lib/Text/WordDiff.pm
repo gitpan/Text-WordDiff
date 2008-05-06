@@ -1,6 +1,6 @@
 package Text::WordDiff;
 
-# $Id: WordDiff.pm 3752 2008-05-05 03:23:55Z david $
+# $Id: WordDiff.pm 3772 2008-05-05 17:27:46Z david $
 
 use strict;
 use vars qw(@ISA $VERSION);
@@ -8,7 +8,7 @@ use Algorithm::Diff ();
 use IO::File;
 use Carp;
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 # _Mastering Regular Expressions_, p. 132.
 my $BEGIN_WORD = $] >= 5.006
@@ -579,7 +579,7 @@ This module is stored in an open repository at the following address:
 
 L<https://svn.kineticode.com/Text-WordDiff/trunk/>
 
-Patches against SVN::Notify are welcome. Please send bug reports to
+Patches against Text::WordDiff are welcome. Please send bug reports to
 <bug-text-worddiff@rt.cpan.org>.
 
 =head1 Author

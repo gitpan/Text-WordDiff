@@ -4,7 +4,7 @@ use strict;
 use HTML::Entities qw(encode_entities);
 use vars qw($VERSION @ISA);
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 @ISA = qw(Text::WordDiff::Base);
 
 sub file_header {
@@ -134,7 +134,7 @@ This module is stored in an open repository at the following address:
 
 L<https://svn.kineticode.com/Text-WordDiff/trunk/>
 
-Patches against SVN::Notify are welcome. Please send bug reports to
+Patches against Text::WordDiff are welcome. Please send bug reports to
 <bug-text-worddiff@rt.cpan.org>.
 
 =head1 Author

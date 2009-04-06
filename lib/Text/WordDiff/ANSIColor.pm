@@ -7,7 +7,7 @@ use vars qw($VERSION @ISA);
 # Term::ANSIColor doesn't support STRIKETHROUGH, so we'll do it ourselves.
 use constant STRIKETHROUGH => "\e[9m";
 
-$VERSION = '0.04';
+$VERSION = '0.05';
 @ISA = qw(Text::WordDiff::Base);
 
 sub same_items {
@@ -61,7 +61,7 @@ Text::WordDiff::ANSIColor - ANSI colored formatting for Text::WordDiff
 This class subclasses Text::WordDiff::Base to provide a formatting class for
 Text::WordDiff that uses ANSI-standard terminal escape sequences to highlight
 deleted and inserted text. This formatting class is the default class used by
-L<Term::WordDiff|Term::WordDiff>; see its documentation for details on its
+L<Text::WordDiff|Text::WordDiff>; see its documentation for details on its
 interface. This class should never be used directly.
 
 Text::WordDiff::ANSIColor formats word diffs for viewing in an ANSI-standard

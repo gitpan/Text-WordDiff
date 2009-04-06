@@ -1,6 +1,6 @@
 package Text::WordDiff;
 
-# $Id: WordDiff.pm 3772 2008-05-05 17:27:46Z david $
+# $Id: WordDiff.pm 3830 2008-05-06 17:23:15Z david $
 
 use strict;
 use vars qw(@ISA $VERSION);
@@ -8,7 +8,7 @@ use Algorithm::Diff ();
 use IO::File;
 use Carp;
 
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 # _Mastering Regular Expressions_, p. 132.
 my $BEGIN_WORD = $] >= 5.006

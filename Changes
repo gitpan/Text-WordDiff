@@ -1,5 +1,9 @@
 Revision history for Perl extension Text::WordDiff.
 
+0.05  2009-04-06T18:34:42
+      - Fixed documentation typo in Search::WordDiff::ANSIColor. Patch from
+        Jeff Lavallee (Ticket #40509).
+
 0.04  2008-05-06T17:24:36
       - Fixed a pasto in the "Support" section of the documentation.
       - Fixed an encoding-related test failure on Perl 5.6.2. Thanks to

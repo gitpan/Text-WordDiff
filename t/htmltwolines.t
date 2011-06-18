@@ -1,21 +1,25 @@
 #!/usr/bin/perl -w
 
+# $Id$
+
 use strict;
 use Test::More tests => 17;
 use Term::ANSIColor qw(:constants);
 use File::Spec::Functions qw(catfile);
 use IO::File;
 
-BEGIN {
+use lib qw( /Users/gwg/Text-WordDiff-0.05/lib );
+
+# BEGIN {
     use_ok 'Text::WordDiff'       or die;
-    use_ok 'Text::WordDiff::HTML' or die;
-}
+    use_ok 'Text::WordDiff::HTMLTwoLines' or die;
+# }
 
 my $string1   = 'This is a test';
 my $string2   = 'That was a test';
-my $term_diff = '<div class="file"><span class="hunk"><del>This is </del><ins>That was </ins></span><span class="hunk">a test</span></div>';
+my $term_diff = '<div class="file"><span class="hunk"><del>This is </del></span><span class="hunk">a test</span></div>' . "\n" . '<div class="file"><span class="hunk"><ins>That was </ins></span><span class="hunk">a test</span></div>' . "\n";
 my %opts = (
-    STYLE => 'HTML',
+    STYLE => 'HTMLTwoLines',
 );
 
 # Test scalar refs.
@@ -42,24 +46,29 @@ my $filename1 = catfile qw(t data left.txt);
 my $filename2 = catfile qw(t data right.txt);
 my $time1     = localtime( (stat $filename1)[9] );
 my $time2     = localtime( (stat $filename2)[9] );
-my $header    = qq{<span class="fileheader">--- $filename1\t$time1\n}
-              . qq{+++ $filename2\t$time2\n</span>};
+my $header1    = qq{<span class="fileheader">--- $filename1 $time1</span>};
+my $header2    = qq{<span class="fileheader">+++ $filename2 $time2</span>};
 
-my $file_diff = qq{<div class="file">$header<span class="hunk">This is a }
-              . qq{</span><span class="hunk"><del>tst;\nit </del><ins>test.\n}
-              . qq{It </ins></span><span class="hunk">is only a\n}
-              . qq{test. Had </span><span class="hunk"><del>it </del>}
-              . qq{<ins>this </ins></span><span class="hunk">been an\n}
-              . qq{actual diff, the results would\n}
-              . qq{have been output to </span><span class="hunk"><del>HTML.\n}
-              . qq{</del><ins>the terminal.\n</ins></span></div>}
-              ;
+my $file_diff = qq{<div class="file">$header1}
+	. qq{<span class="hunk">This is a </span><span class="hunk"><del>tst;\n}
+	. qq{it </del></span><span class="hunk">is only a\n}
+	. qq{test. Had </span><span class="hunk"><del>it </del></span><span class="hunk">been an\n}
+	. qq{actual diff, the results would\n}
+	. qq{have been output to </span><span class="hunk"><del>HTML.\n</del></span></div>\n}
+	. qq{<div class="file">$header2}
+	. qq{<span class="hunk">This is a </span><span class="hunk"><ins>test.\n}
+	. qq{It </ins></span><span class="hunk">is only a\n}
+	. qq{test. Had </span><span class="hunk"><ins>this </ins></span><span class="hunk">been an\n}
+	. qq{actual diff, the results would\n}
+	. qq{have been output to </span><span class="hunk"><ins>the terminal.\n</ins></span></div>\n}
+    ;
 
 is word_diff($filename1, $filename2, \%opts), $file_diff,
     'Diff by file name should include a header';
 
 # No more header after this.
-$file_diff =~ s/\Q$header\E//;
+$file_diff =~ s/\Q$header1\E//;
+$file_diff =~ s/\Q$header2\E//;
 
 # Try globs.
 local (*FILE1, *FILE2);

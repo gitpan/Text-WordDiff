@@ -1,14 +1,12 @@
 package Text::WordDiff;
 
-# $Id: WordDiff.pm 3830 2008-05-06 17:23:15Z david $
-
 use strict;
 use vars qw(@ISA $VERSION);
 use Algorithm::Diff ();
 use IO::File;
 use Carp;
 
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 # _Mastering Regular Expressions_, p. 132.
 my $BEGIN_WORD = $] >= 5.006
@@ -16,8 +14,9 @@ my $BEGIN_WORD = $] >= 5.006
     : qr/(?<!\w)(?=\w)/msx;
 
 my %styles = (
-    ANSIColor => undef,
-    HTML      => undef,
+    ANSIColor    => undef,
+    HTML         => undef,
+    HTMLTwoLines => undef,
 );
 
 sub import {
@@ -597,7 +596,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2005-2008 David Wheeler. Some Rights Reserved.
+Copyright (c) 2005-2011 David E. Wheeler. Some Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

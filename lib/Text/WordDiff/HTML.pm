@@ -4,7 +4,7 @@ use strict;
 use HTML::Entities qw(encode_entities);
 use vars qw($VERSION @ISA);
 
-$VERSION = '0.05';
+$VERSION = '0.06';
 @ISA = qw(Text::WordDiff::Base);
 
 sub file_header {
@@ -152,7 +152,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2005-2008 David Wheeler. Some Rights Reserved.
+Copyright (c) 2005-2011 David E. Wheeler. Some Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself.

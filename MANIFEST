@@ -1,4 +1,3 @@
-.gitignore
 Build.PL
 Changes
 eg/word_diff.css

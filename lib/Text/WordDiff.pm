@@ -6,7 +6,7 @@ use Algorithm::Diff ();
 use IO::File;
 use Carp;
 
-$VERSION = '0.06';
+$VERSION = '0.07';
 
 # _Mastering Regular Expressions_, p. 132.
 my $BEGIN_WORD = $] >= 5.006
@@ -187,17 +187,6 @@ sub filename_prefix_b   { return shift->{FILENAME_PREFIX_B} }
 __END__
 
 ##############################################################################
-
-=begin comment
-
-Fake-out Module::Build. Delete if it ever changes to support =head1 headers
-other than all uppercase.
-
-=head1 NAME
-
-Text::WordDiff - Track changes between documents
-
-=end comment
 
 =head1 Name
 
@@ -574,25 +563,17 @@ The module that makes this all possible.
 
 =head1 Support
 
-This module is stored in an open repository at the following address:
+This module is stored in an open L<GitHub
+repository|http://github.com/theory/text-worddiff/>. Feel free to fork and
+contribute!
 
-L<https://svn.kineticode.com/Text-WordDiff/trunk/>
-
-Patches against Text::WordDiff are welcome. Please send bug reports to
-<bug-text-worddiff@rt.cpan.org>.
+Please file bug reports via L<GitHub
+Issues|http://github.com/theory/text-worddiff/issues/> or by sending mail to
+L<bug-Text-WordDiff@rt.cpan.org|mailto:bug-Text-WordDiff@rt.cpan.org>.
 
 =head1 Author
 
-=begin comment
-
-Fake-out Module::Build. Delete if it ever changes to support =head1 headers
-other than all uppercase.
-
-=head1 AUTHOR
-
-=end comment
-
-David Wheeler <david@kineticode.com>
+David E. Wheeler <david@justatheory.com>
 
 =head1 Copyright and License
 

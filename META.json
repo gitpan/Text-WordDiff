@@ -1,7 +1,7 @@
 {
    "abstract" : "Track changes between documents",
    "author" : [
-      "David Wheeler <david@kineticode.com>"
+      "David E. Wheeler <david@justatheory.com>"
    ],
    "dynamic_config" : 1,
    "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110440",
@@ -40,11 +40,11 @@
    "provides" : {
       "Text::WordDiff" : {
          "file" : "lib/Text/WordDiff.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "Text::WordDiff::ANSIColor" : {
          "file" : "lib/Text/WordDiff/ANSIColor.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "Text::WordDiff::Base" : {
          "file" : "lib/Text/WordDiff.pm",
@@ -52,18 +52,25 @@
       },
       "Text::WordDiff::HTML" : {
          "file" : "lib/Text/WordDiff/HTML.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "Text::WordDiff::HTMLTwoLines" : {
          "file" : "lib/Text/WordDiff/HTMLTwoLines.pm",
-         "version" : "0.05"
+         "version" : "0.07"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/theory/test-xpath/issues/"
+      },
+      "homepage" : "http://search.cpan.org/dist/Text-WordDiff/",
       "license" : [
          "http://dev.perl.org/licenses/"
-      ]
+      ],
+      "repository" : {
+         "url" : "http://github.com/theory/test-xpath/tree/"
+      }
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }

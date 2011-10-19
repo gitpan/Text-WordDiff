@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.2701
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110440'
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,19 +18,19 @@ name: Text-WordDiff
 provides:
   Text::WordDiff:
     file: lib/Text/WordDiff.pm
-    version: 0.07
+    version: 0.08
   Text::WordDiff::ANSIColor:
     file: lib/Text/WordDiff/ANSIColor.pm
-    version: 0.07
+    version: 0.08
   Text::WordDiff::Base:
     file: lib/Text/WordDiff.pm
     version: 0
   Text::WordDiff::HTML:
     file: lib/Text/WordDiff/HTML.pm
-    version: 0.07
+    version: 0.08
   Text::WordDiff::HTMLTwoLines:
     file: lib/Text/WordDiff/HTMLTwoLines.pm
-    version: 0.07
+    version: 0.08
 recommends:
   Test::Pod: 1.41
 requires:
@@ -42,4 +42,4 @@ resources:
   homepage: http://search.cpan.org/dist/Text-WordDiff/
   license: http://dev.perl.org/licenses/
   repository: http://github.com/theory/test-xpath/tree/
-version: 0.07
+version: 0.08

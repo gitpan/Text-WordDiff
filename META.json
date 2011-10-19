@@ -4,7 +4,7 @@
       "David E. Wheeler <david@justatheory.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110440",
+   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -40,11 +40,11 @@
    "provides" : {
       "Text::WordDiff" : {
          "file" : "lib/Text/WordDiff.pm",
-         "version" : "0.07"
+         "version" : "0.08"
       },
       "Text::WordDiff::ANSIColor" : {
          "file" : "lib/Text/WordDiff/ANSIColor.pm",
-         "version" : "0.07"
+         "version" : "0.08"
       },
       "Text::WordDiff::Base" : {
          "file" : "lib/Text/WordDiff.pm",
@@ -52,11 +52,11 @@
       },
       "Text::WordDiff::HTML" : {
          "file" : "lib/Text/WordDiff/HTML.pm",
-         "version" : "0.07"
+         "version" : "0.08"
       },
       "Text::WordDiff::HTMLTwoLines" : {
          "file" : "lib/Text/WordDiff/HTMLTwoLines.pm",
-         "version" : "0.07"
+         "version" : "0.08"
       }
    },
    "release_status" : "stable",
@@ -72,5 +72,5 @@
          "url" : "http://github.com/theory/test-xpath/tree/"
       }
    },
-   "version" : "0.07"
+   "version" : "0.08"
 }
